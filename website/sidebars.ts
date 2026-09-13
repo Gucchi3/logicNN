@@ -5,6 +5,7 @@ const sidebars: SidebarsConfig = {
   startupSidebar: ['startup/setup', 'startup/dataset', 'startup/first-training', 'startup/results'],
   userGuideSidebar: [
     'user-guide/index',
+    'user-guide/workflow',
     'user-guide/configuration',
     'user-guide/training',
     'user-guide/checkpoints',
