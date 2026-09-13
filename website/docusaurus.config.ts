@@ -2,11 +2,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const [repositoryOwner = '', repositoryName = 'logicNN'] = (process.env.GITHUB_REPOSITORY ?? '').split('/');
+const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true' && repositoryOwner !== '';
+const isRootPagesRepository = repositoryName.toLowerCase() === `${repositoryOwner.toLowerCase()}.github.io`;
+const siteUrl = isGitHubPagesBuild ? `https://${repositoryOwner}.github.io` : 'http://localhost';
+const siteBaseUrl = isGitHubPagesBuild && !isRootPagesRepository ? `/${repositoryName}/` : '/';
+
 const config: Config = {
   title: 'logicNN',
   tagline: '論理ゲートニューラルネットワークの学習・評価・回路出力',
-  url: 'http://localhost',
-  baseUrl: '/',
+  url: siteUrl,
+  baseUrl: siteBaseUrl,
+  organizationName: repositoryOwner || undefined,
+  projectName: repositoryName,
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   future: {
     v4: true,
