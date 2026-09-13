@@ -1,0 +1,61 @@
+:root {
+  --ifm-color-primary: #2d6a8a;
+  --ifm-color-primary-dark: #285f7c;
+  --ifm-color-primary-darker: #265a75;
+  --ifm-color-primary-darkest: #1f4a61;
+  --ifm-color-primary-light: #327598;
+  --ifm-color-primary-lighter: #347a9f;
+  --ifm-color-primary-lightest: #3b89b3;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #63b3d1;
+  --ifm-color-primary-dark: #49a6c8;
+  --ifm-color-primary-darker: #3da0c4;
+  --ifm-color-primary-darkest: #3183a2;
+  --ifm-color-primary-light: #7dbfda;
+  --ifm-color-primary-lighter: #89c5dd;
+  --ifm-color-primary-lightest: #afd8e8;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__title {
+  letter-spacing: 0.02em;
+}
+
+.theme-doc-markdown h1 {
+  letter-spacing: -0.02em;
+}
+
+.source-tree-file > .menu__link,
+.source-tree-directory > .menu__list-item-collapsible > .menu__link,
+.source-tree-pending > span {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+}
+
+.source-tree-pending {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+  color: var(--ifm-color-emphasis-600);
+  overflow-wrap: anywhere;
+}
+
+.source-tree-pending small {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+}
+
+.source-reference-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}

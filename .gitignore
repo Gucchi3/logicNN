@@ -1,0 +1,35 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local data and generated training artifacts
+data/
+log/
+
+# Docusaurus dependencies and generated output
+website/build/
+website/.docusaurus/
+website/node_modules/
+
+# Keep the documentation sources and site configuration in Git.
+!website/docs/
+!website/docs/**
+!website/src/
+!website/src/**
+!website/static/
+!website/static/**
+!website/docusaurus.config.ts
+!website/sidebars.ts
+!website/code-reference-sidebar.ts
+!website/package.json
+!website/package-lock.json
+!website/tsconfig.json
+
+# logicNN_core packaging output
+utils/logicNN_core/build/
+utils/logicNN_core/dist/
+utils/logicNN_core/src/*.egg-info/

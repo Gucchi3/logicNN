@@ -1,0 +1,29 @@
+[project]
+name            = "logicnn"
+version         = "0.1.0"
+description     = "論理ゲートニューラルネットワークの学習と回路出力"
+readme          = "README.md"
+requires-python = ">=3.10"
+dependencies    = [
+    "logicNN-core",
+    "matplotlib",
+    "numpy",
+    "pydantic>=2",
+    "rich",
+    "torch",
+    "torchvision",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+logicNN-core = { path = "utils/logicNN_core", editable = true }
+
+[tool.ruff]
+line-length    = 160
+target-version = "py310"
+cache-dir      = ".venv/.cache/ruff"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,37 @@
+{
+  "run": {
+    "seed": 0,
+    "device": "auto",
+    "log_dir": "log",
+    "initial_checkpoint_path": null
+  },
+  "data": {
+    "name": "mnist",
+    "root": "data",
+    "batch_size": 128,
+    "num_workers": 0
+  },
+  "model": {
+    "name": "mnist_lgn"
+  },
+  "train": {
+    "epochs": 100,
+    "loss": {
+      "name": "cross_entropy",
+      "label_smoothing": 0.0
+    },
+    "optimizer": {
+      "name": "adamw",
+      "learning_rate": 0.01,
+      "weight_decay": 0.0
+    },
+    "scheduler": {
+      "name": "cosine_annealing",
+      "minimum_learning_rate": 0.0001
+    }
+  },
+  "circuit": {
+    "enabled": true
+  }
+}
+
